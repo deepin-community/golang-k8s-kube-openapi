@@ -1,0 +1,19 @@
+Description: for some reason this is compatible with how dh-golang builds it
+Forwarded: no
+Author: Jérémy Lal <kapouer@melix.org>
+--- a/test/integration/import.go
++++ b/test/integration/import.go
+@@ -12,7 +12,6 @@
+ // See the License for the specific language governing permissions and
+ // limitations under the License.
+ 
+-//go:build tools
+ 
+ package integration
+ 
+@@ -20,4 +19,4 @@
+ // there to import "k8s.io/kube-openapi/cmd/openapi-gen", so that
+ // "go mod tidy" will not remove the openapi-gen's dependencies.
+ // openapi-gen is indeed built as part of the integration tests.
+-import _ "k8s.io/kube-openapi/cmd/openapi-gen"
++//import _ "k8s.io/kube-openapi/cmd/openapi-gen"

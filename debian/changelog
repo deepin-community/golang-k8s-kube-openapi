@@ -1,5 +1,39 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-k8s-kube-openapi (0.0~git20231214.ab13479-3) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * Backport upstream test timeout patch (Closes: #1064362)
+    - https://github.com/kubernetes/kube-openapi/pull/453
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Tianon Gravi <tianon@debian.org>  Mon, 13 May 2024 00:01:06 -0700
+
+golang-k8s-kube-openapi (0.0~git20231214.ab13479-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add testdata to DH_GOLANG_INSTALL_EXTRA
+  * Skip failed json marshal tests with Go1.22
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 29 Feb 2024 19:09:49 +0800
+
+golang-k8s-kube-openapi (0.0~git20231214.ab13479-1) unstable; urgency=medium
+
+  * Team upload.
+  * Upstream update.
+  * control: update dependencies
+  * drop go-protobuf, replaced by google-protobuf
+  * patches to fix compatibility issues with debian dependencies and tests
+  * do not install builder3
+  * dh_auto_test: use hooks to setup/teardown files
+
+ -- Jérémy Lal <kapouer@melix.org>  Fri, 29 Dec 2023 12:18:58 +0100
+
+golang-k8s-kube-openapi (0.0~git20211014.b3fe75c-2) unstable; urgency=medium
+
+  * Rebuild with no changes to the source.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Mon, 08 Nov 2021 21:58:58 +0100
+
+golang-k8s-kube-openapi (0.0~git20211014.b3fe75c-1) unstable; urgency=medium
+
+  * Initial release (Closes: #996574).
+
+ -- Andrej Shadura <andrewsh@debian.org>  Fri, 15 Oct 2021 19:49:41 +0200

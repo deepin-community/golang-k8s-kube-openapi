@@ -1,0 +1,21 @@
+Description: golang-github-emicklei-go-restful requires leading slash
+ The version in debian is incompatible
+Forwarded: https://github.com/kubernetes/kube-openapi/pull/442
+Author: Jérémy Lal <kapouer@melix.org>
+--- a/test/integration/testutil/testutil.go
++++ b/test/integration/testutil/testutil.go
+@@ -131,12 +131,12 @@
+ 	}
+ 
+ 	routes := []*restful.RouteBuilder{
+-		ws.GET(fmt.Sprintf("test/%s/%s", pkg, strings.ToLower(name))).
++		ws.GET(fmt.Sprintf("/test/%s/%s", pkg, strings.ToLower(name))).
+ 			Operation(fmt.Sprintf("get-%s.%s", pkg, name)).
+ 			Produces("application/json").
+ 			To(func(*restful.Request, *restful.Response) {}).
+ 			Writes(&namer),
+-		ws.POST(fmt.Sprintf("test/%s", pkg)).
++		ws.POST(fmt.Sprintf("/test/%s", pkg)).
+ 			Operation(fmt.Sprintf("create-%s.%s", pkg, name)).
+ 			Produces("application/json").
+ 			To(func(*restful.Request, *restful.Response) {}).
