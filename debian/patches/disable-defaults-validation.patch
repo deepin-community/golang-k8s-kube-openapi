@@ -1,0 +1,16 @@
+Description: compatibility with golang-github-getkin-kin-openapi 0.120.0
+ Tests were written for an old version of it
+Author: Jérémy Lal <kapouer@melix.org>
+Forwarded: no
+	
+--- a/test/integration/builder3/main.go
++++ b/test/integration/builder3/main.go
+@@ -60,7 +60,7 @@
+ 		log.Fatalf("OpenAPI v3 ref resolve error: %s", err.Error())
+ 	}
+ 
+-	err = specForValidator.Validate(loader.Context)
++	err = specForValidator.Validate(loader.Context, openapi3.DisableSchemaDefaultsValidation())
+ 
+ 	if err != nil {
+ 		log.Fatalf("OpenAPI v3 validation error: %s", err.Error())

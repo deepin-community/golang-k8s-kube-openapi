@@ -1,0 +1,6 @@
+fix-test-constraint.patch
+google-protobuf-fix-crash.patch
+disable-defaults-validation.patch
+go-restful-compat.patch
+Skip-failed-json-marshal-tests-with-Go1.22.patch
+453-test-integration-bump-timeout.patch

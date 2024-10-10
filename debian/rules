@@ -1,4 +1,8 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_INSTALL_EXTRA := boilerplate \
+	pkg/validation/validate/fixtures \
+	pkg/openapiconv/testdata_generated_from_k8s
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang

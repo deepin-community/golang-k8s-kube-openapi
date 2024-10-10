@@ -1,0 +1,17 @@
+From: Aurelien Jarno <aurelien@aurel32.net>
+Subject: test/integration: bump timeout to 20s (esp. for riscv64)
+Applied-Upstream: https://github.com/kubernetes/kube-openapi/commit/b4a5507e9c90356cbf47fb4ad34862ded7919b1e
+
+diff --git a/test/integration/integration_suite_test.go b/test/integration/integration_suite_test.go
+index dae43a93a..35e895820 100644
+--- a/test/integration/integration_suite_test.go
++++ b/test/integration/integration_suite_test.go
+@@ -50,7 +50,7 @@ const (
+ 	generatedOpenAPIv3FileName = "generated.v3.json"
+ 	goldenOpenAPIv3Filename    = "golden.v3.json"
+ 
+-	timeoutSeconds = 10.0
++	timeoutSeconds = 20.0
+ )
+ 
+ var (
